@@ -1,0 +1,53 @@
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-border {
+  0%, 100% {
+    border-color: rgba(var(--primary), 0.3);
+  }
+  50% {
+    border-color: rgba(var(--primary), 0.6);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.5s ease-out;
+}
+
+.animate-pulse-border {
+  animation: pulse-border 2s infinite;
+}
+
+.bg-grid-white {
+  background-image: linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+}
+
+.hover-card-lift {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-card-lift:hover {
+  transform: translateY(-2px);
+}
